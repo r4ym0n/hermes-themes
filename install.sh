@@ -32,7 +32,7 @@ if command -v hermes >/dev/null 2>&1; then
   hermes config set dashboard.theme vscode-light
   hermes config set display.skin vscode-light
 else
-  echo "找不到 hermes。文件已复制，请手动设置 dashboard.theme 和 display.skin 为 vscode-light。"
+  echo "hermes was not found. Files were copied. Set dashboard.theme and display.skin to vscode-light yourself."
 fi
 
 python3 - "${HERMES_HOME}/hermes-agent/hermes_cli/web_server_dashboard.py" <<'PY'
@@ -41,11 +41,11 @@ from pathlib import Path
 path = Path(sys.argv[1])
 marker = 'for key in ("terminalBackground", "terminalForeground"):'
 if not path.is_file():
-    print(f"未找到 {path}，跳过终端底色补丁。")
+    print(f"Did not find {path}. Skipped the terminal color patch.")
     raise SystemExit(0)
 text = path.read_text()
 if marker in text:
-    print("终端底色补丁已经在。")
+    print("Terminal color patch is already present.")
     raise SystemExit(0)
 needle = '''    if component_styles:
         result["componentStyles"] = component_styles
@@ -57,10 +57,10 @@ insert = '''    if component_styles:
             result[key] = data[key].strip()
     return result'''
 if needle not in text:
-    print("Hermes 主题加载器和预期不一致，没有自动打终端底色补丁。")
+    print("The Hermes theme loader did not match the expected code. Skipped the terminal color patch.")
     raise SystemExit(0)
 path.write_text(text.replace(needle, insert, 1))
-print("已让 Hermes 把主题里的终端底色和字色传给页面。重启 dashboard 后生效。")
+print("Hermes will now pass the theme terminal background and foreground through. Restart the dashboard to pick it up.")
 PY
 
-echo "装好了。刷新 Dashboard 使用「VS Code 浅色」。Chat 里新开一轮，终端皮肤才会换上。"
+echo "Installed. Refresh the dashboard to use VS Code Light. Start a new chat before the terminal skin changes."
