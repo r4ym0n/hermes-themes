@@ -1,0 +1,39 @@
+# Classic VS Code Light+ colors for the Hermes TUI.
+# `background` is the canvas the skin paints; a light value switches the TUI to light polarity.
+name: vscode-light
+description: Classic VS Code Light+ terminal and chrome
+
+colors:
+  background: "#FFFFFF"
+  banner_border: "#007ACC"
+  banner_title: "#000000"
+  banner_accent: "#007ACC"
+  banner_dim: "#616161"
+  banner_text: "#333333"
+  ui_accent: "#007ACC"
+  ui_label: "#0451A5"
+  ui_ok: "#008000"
+  ui_error: "#CD3131"
+  ui_warn: "#7A6400"
+  prompt: "#333333"
+  input_rule: "#CECECE"
+  response_border: "#007ACC"
+  status_bar_bg: "#007ACC"
+  status_bar_text: "#FFFFFF"
+  status_bar_strong: "#FFFFFF"
+  status_bar_dim: "#CCE6F6"
+  status_bar_good: "#C8F7C5"
+  status_bar_warn: "#FFF4C2"
+  status_bar_bad: "#FFD0D0"
+  status_bar_critical: "#FFB4B4"
+  session_label: "#0451A5"
+  session_border: "#CECECE"
+  completion_menu_bg: "#F3F3F3"
+  completion_menu_current_bg: "#ADD6FF"
+  completion_menu_meta_bg: "#FFFFFF"
+  completion_menu_meta_current_bg: "#D6EBFF"
+  selection_bg: "#ADD6FF"
+  shell_dollar: "#0451A5"
+  voice_status_bg: "#F3F3F3"
+
+tool_prefix: "│"

@@ -1,0 +1,64 @@
+# Classic VS Code Light+ workbench: gray chrome, white surfaces, #007ACC accent.
+name: vscode-light
+label: VS Code 浅色
+description: 经典 VS Code Light+。白底编辑区、灰侧栏、蓝色强调，终端为浅色
+
+palette:
+  background: "#f3f3f3"
+  midground: "#333333"
+  foreground:
+    hex: "#ffffff"
+    alpha: 0
+  warmGlow: "rgba(0, 122, 204, 0)"
+  noiseOpacity: 0
+
+typography:
+  fontSans: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", system-ui, sans-serif'
+  fontMono: 'Menlo, Monaco, Consolas, "JetBrains Mono", ui-monospace, monospace'
+  baseSize: "13px"
+  lineHeight: "1.4"
+  letterSpacing: "0"
+
+layout:
+  radius: "0"
+  density: comfortable
+
+colorOverrides:
+  card: "#ffffff"
+  cardForeground: "#333333"
+  popover: "#ffffff"
+  popoverForeground: "#333333"
+  primary: "#007acc"
+  primaryForeground: "#ffffff"
+  secondary: "#e8e8e8"
+  secondaryForeground: "#333333"
+  muted: "#ececec"
+  mutedForeground: "#616161"
+  accent: "#e8e8e8"
+  accentForeground: "#333333"
+  border: "#cecece"
+  input: "#cecece"
+  ring: "#0090f1"
+  success: "#008000"
+  warning: "#7a6400"
+  destructive: "#cd3131"
+  destructiveForeground: "#ffffff"
+
+componentStyles:
+  header:
+    background: "#dddddd"
+    boxShadow: "inset 0 -1px 0 #cecece"
+  card:
+    background: "#ffffff"
+    boxShadow: "inset 0 0 0 1px #e5e5e5"
+  page:
+    background: "#f3f3f3"
+
+terminalBackground: "#ffffff"
+terminalForeground: "#333333"
+
+customCSS: |
+  ::selection {
+    background: #add6ff;
+    color: #000000;
+  }
